@@ -1,6 +1,6 @@
 // import 'package:cinema_showtime_selection/component/movie_place_holder.dart';
 
-import 'package:cinema_showtime_selection/component/scrolling_movie_list.dart';
+import 'package:cinema_showtime_selection/screen/loading_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -35,12 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
   String constString = "ABCD";
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Center(child: Text(widget.title))),
-      body:
-          const Center(child: Column(children: <Widget>[ScrollingMovieList()])),
-    );
+    return const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Center(child: LoadingScreen()));
   }
 }
