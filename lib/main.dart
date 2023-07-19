@@ -1,9 +1,10 @@
 // import 'package:cinema_showtime_selection/component/movie_place_holder.dart';
 
-import 'package:cinema_showtime_selection/component/scrolling_movie_list.dart';
+import 'package:cinema_showtime_selection/Screen/home_screen.dart';
+import 'package:cinema_showtime_selection/component/bottom_navigation.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -35,12 +36,17 @@ class _MyHomePageState extends State<MyHomePage> {
   String constString = "ABCD";
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Center(child: Text(widget.title))),
-      body:
-          const Center(child: Column(children: <Widget>[ScrollingMovieList()])),
-    );
+    return const Scaffold(
+        body: Stack(
+      children: [
+        MyHomeScreen(),
+        Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 15.0),
+              child: BottomNavigation(),
+            ))
+      ],
+    ));
   }
 }
