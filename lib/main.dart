@@ -1,9 +1,6 @@
 // import 'package:cinema_showtime_selection/component/movie_place_holder.dart';
 
-<<<<<<< HEAD
 import 'package:cinema_showtime_selection/screen/loading_screen.dart';
-=======
->>>>>>> 3bd87c0100e5c8771d7e211a15d1af2c9a1f0c14
 import 'package:cinema_showtime_selection/Screen/home_screen.dart';
 import 'package:cinema_showtime_selection/component/bottom_navigation.dart';
 import 'package:flutter/material.dart';
