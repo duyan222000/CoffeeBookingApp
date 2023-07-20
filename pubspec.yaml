@@ -9,9 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  flutter_svg: ^2.0.5
-  rive: ^0.8.4
-
+  flutter_svg: ^2.0.7
 
 dev_dependencies:
   flutter_test:
@@ -21,11 +19,32 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/spider_man.jpg
+    - assets/images/cappuccino.png
     - assets/images/background_photo.png
     - assets/svgs/icon.svg
     - assets/rives/logo.riv
+    - assets/images/flat_white.png
+    - assets/images/mocha.png
+    - assets/images/americano.png
+    - assets/svgs/buy.svg
+    - assets/svgs/profile.svg
+    - assets/svgs/coffee_cup.svg
+    - assets/svgs/coffee_cup_disable.svg
+    - assets/svgs/home.svg
+    - assets/svgs/receipt.svg
+    - assets/svgs/gift.svg    
+    - assets/svgs/home_disable.svg
+    - assets/svgs/receipt_disable.svg
+    - assets/svgs/gift_disable.svg
+    
+
+
+
 
   fonts:
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins.ttf
+    - family: DM Sans
+      fonts:
+        - asset: assets/fonts/DMSans.ttf
