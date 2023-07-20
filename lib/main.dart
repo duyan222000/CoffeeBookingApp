@@ -4,23 +4,38 @@ import 'package:cinema_showtime_selection/screen/loading_screen.dart';
 import 'package:cinema_showtime_selection/Screen/home_screen.dart';
 import 'package:cinema_showtime_selection/component/bottom_navigation.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'package:cinema_showtime_selection/controllers/coffee_options.dart';
+
+import 'view/detail.dart';
 
 void main() async {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Cinema Selection',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Cinema Ticket Selection'),
-    );
+    return MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => QuantityOption()),
+          ChangeNotifierProvider(create: (_) => ShotOption()),
+          ChangeNotifierProvider(create: (_) => CupTypeOption()),
+          ChangeNotifierProvider(create: (_) => SizeOption()),
+          ChangeNotifierProvider(create: (_) => IceOption()),
+        ],
+        child: MaterialApp(
+          //title: 'Cinema Selection',
+          //theme: ThemeData(
+          //colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+          //useMaterial3: true,
+          //),
+          // ),
+          //home: const MyHomePage(title: 'Cinema Ticket Selection'),
+          home: CoffeeDetailOrder(),
+        ));
   }
 }
 
