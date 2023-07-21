@@ -32,8 +32,13 @@ class ShotRow extends StatelessWidget {
                     width: 73,
                     height: 29,
                     decoration: BoxDecoration(
-                        color:
-                            shotChose.singleShot ? Colors.white : Colors.grey,
+                        border: Border.all(
+                          color: Color.fromRGBO(216, 216, 216, 0.40),
+                          width: 1.2,
+                        ),
+                        color: shotChose.singleShot
+                            ? Color.fromRGBO(216, 216, 216, 0.40)
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(50)),
                     child: Center(
                       child: const Text(
@@ -51,8 +56,13 @@ class ShotRow extends StatelessWidget {
                     width: 73,
                     height: 29,
                     decoration: BoxDecoration(
-                        color:
-                            shotChose.singleShot ? Colors.grey : Colors.white,
+                        border: Border.all(
+                          color: Color.fromRGBO(216, 216, 216, 0.40),
+                          width: 1.2,
+                        ),
+                        color: shotChose.doubleShot
+                            ? Color.fromRGBO(216, 216, 216, 0.40)
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(50)),
                     child: Center(
                       child: const Text(

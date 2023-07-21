@@ -17,15 +17,19 @@ class QuantityOption with ChangeNotifier {
 
 class ShotOption with ChangeNotifier {
   bool _singleShot = false;
+  bool _doubleShot = false;
 
   bool get singleShot => _singleShot;
+  bool get doubleShot => _doubleShot;
   void chooseSingleShot() {
     _singleShot = true;
+    _doubleShot = false;
     notifyListeners();
   }
 
   void chooseDoubleShot() {
     _singleShot = false;
+    _doubleShot = true;
     notifyListeners();
   }
 }
@@ -47,7 +51,7 @@ class TempOption with ChangeNotifier {
 
 class SizeOption with ChangeNotifier {
   bool _small = false;
-  bool _medium = false;
+  bool _medium = true;
   bool _big = false;
 
   bool get small => _small;
@@ -78,7 +82,7 @@ class SizeOption with ChangeNotifier {
 class IceOption with ChangeNotifier {
   bool _leastAmount = false;
   bool _mediumAmount = false;
-  bool _mostAmount = false;
+  bool _mostAmount = true;
 
   bool get leastIce => _leastAmount;
   bool get mediumIce => _mediumAmount;

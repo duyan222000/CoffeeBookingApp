@@ -1,11 +1,14 @@
+import 'package:cinema_showtime_selection/controllers/coffee_options.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 
 class SizeSelect extends StatelessWidget {
   const SizeSelect({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final size = Provider.of<SizeOption>(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -23,16 +26,28 @@ class SizeSelect extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 GestureDetector(
-                  onTap: () {},
-                  child: SvgPicture.asset("assets/svgs/size_small.svg"),
+                  onTap: () {
+                    size.chooseSmall();
+                  },
+                  child: size.small
+                      ? SvgPicture.asset("assets/svgs/size_small_choose.svg")
+                      : SvgPicture.asset("assets/svgs/size_small.svg"),
                 ),
                 GestureDetector(
-                  onTap: () {},
-                  child: SvgPicture.asset("assets/svgs/size_medium.svg"),
+                  onTap: () {
+                    size.chooseMedium();
+                  },
+                  child: size.medium
+                      ? SvgPicture.asset("assets/svgs/size_medium_choose.svg")
+                      : SvgPicture.asset("assets/svgs/size_medium.svg"),
                 ),
                 GestureDetector(
-                  onTap: () {},
-                  child: SvgPicture.asset("assets/svgs/size_big.svg"),
+                  onTap: () {
+                    size.chooseBig();
+                  },
+                  child: size.big
+                      ? SvgPicture.asset("assets/svgs/size_big_choose.svg")
+                      : SvgPicture.asset("assets/svgs/size_big.svg"),
                 ),
               ],
             ))

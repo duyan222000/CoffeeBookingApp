@@ -1,10 +1,10 @@
 name: cinema_showtime_selection
 description: A new Flutter project.
-publish_to: 'none'
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.6 <4.0.0'
+  sdk: ">=3.0.6 <4.0.0"
 dependencies:
   flutter:
     sdk: flutter
@@ -33,7 +33,7 @@ flutter:
     - assets/svgs/coffee_cup_disable.svg
     - assets/svgs/home.svg
     - assets/svgs/receipt.svg
-    - assets/svgs/gift.svg    
+    - assets/svgs/gift.svg
     - assets/svgs/home_disable.svg
     - assets/svgs/receipt_disable.svg
     - assets/svgs/gift_disable.svg
@@ -43,14 +43,13 @@ flutter:
     - assets/svgs/cold_coffee.svg
     - assets/svgs/cold_coffee_choose.svg
     - assets/svgs/size_small.svg
+    - assets/svgs/size_small_choose.svg
     - assets/svgs/size_medium.svg
+    - assets/svgs/size_medium_choose.svg
     - assets/svgs/size_big.svg
-    - assets/svgs/ice1.svg
-    - assets/svgs/ice2.svg
-    - assets/svgs/ice3.svg
-
-
-
+    - assets/svgs/size_big_choose.svg
+    - assets/svgs/ice_cube.svg
+    - assets/svgs/ice_cube_disable.svg
 
   fonts:
     - family: Poppins

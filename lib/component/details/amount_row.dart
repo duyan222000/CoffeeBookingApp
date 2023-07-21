@@ -32,7 +32,13 @@ class AmountRow extends StatelessWidget {
                   onTap: () {
                     quantity.decreaseQuantity();
                   },
-                  child: const Text('-'),
+                  child: const Text(
+                    '-',
+                    style: TextStyle(
+                      fontFamily: "Poppins",
+                      fontSize: 20,
+                    ),
+                  ),
                 ),
                 Text(
                   '${quantity.quantity}',

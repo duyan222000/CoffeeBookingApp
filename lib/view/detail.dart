@@ -1,3 +1,4 @@
+import 'package:cinema_showtime_selection/component/details/details_total_cast.dart';
 import 'package:cinema_showtime_selection/component/details/ice_row.dart';
 import 'package:cinema_showtime_selection/component/details/navigation_bar.dart';
 import 'package:cinema_showtime_selection/component/details/amount_row.dart';
@@ -12,7 +13,7 @@ class CoffeeDetailOrder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 176, 140, 34),
+        backgroundColor: const Color(0xFFFFFFFF),
         body: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -22,12 +23,12 @@ class CoffeeDetailOrder extends StatelessWidget {
               child: NavigationBarDetail(),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20.0, bottom: 10),
+              padding: const EdgeInsets.only(top: 20.0, bottom: 30),
               child: Container(
                 decoration: const BoxDecoration(
-                    color: Color(0xFFF7F8FB),
+                    color: Color.fromRGBO(229, 224, 223, 1),
                     borderRadius: BorderRadius.all(Radius.circular(12))),
-                width: 325,
+                width: 350,
                 height: 146,
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(10),
@@ -37,34 +38,44 @@ class CoffeeDetailOrder extends StatelessWidget {
                     )),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 50, right: 50),
+            const Padding(
+              padding: const EdgeInsets.only(left: 35, right: 35),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     AmountRow(),
                     Divider(
-                      color: Colors.grey,
-                      thickness: 1,
+                      color: Color.fromARGB(122, 188, 182, 182),
+                      thickness: 0.5,
                     ),
                     ShotRow(),
                     Divider(
-                      color: Colors.grey,
-                      thickness: 1,
+                      color: Color.fromARGB(122, 188, 182, 182),
+                      thickness: 0.5,
                     ),
                     SelectTypeRow(),
                     Divider(
-                      color: Colors.grey,
-                      thickness: 1,
+                      color: Color.fromARGB(122, 188, 182, 182),
+                      thickness: 0.5,
                     ),
                     SizeSelect(),
                     Divider(
-                      color: Colors.grey,
-                      thickness: 1,
+                      color: Color.fromARGB(122, 188, 182, 182),
+                      thickness: 0.5,
                     ),
-                    IceSelect()
+                    IceSelect(),
                   ]),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 30, right: 30, bottom: 20, top: 80),
+              child: TotalCast(),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(248, 50, 74, 89),
+                  borderRadius: BorderRadius.all(Radius.circular(30))),
             )
           ],
         )
