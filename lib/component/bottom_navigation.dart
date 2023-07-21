@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class BottomNavigation extends StatefulWidget {
-  const BottomNavigation({super.key});
-
+  final Function onChange;
+  const BottomNavigation({super.key, required this.onChange});
   @override
   State<BottomNavigation> createState() => _BottomNavigationState();
 }
@@ -25,11 +25,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
               width: 0,
             ),
             IconButton(
-              onPressed: () => {
-                setState(() {
-                  currentPage = 0;
-                })
-              },
+              onPressed: () => {widget.onChange(0), currentPage = 0},
               icon: currentPage == 0
                   ? SvgPicture.asset(
                       'assets/svgs/home.svg',
@@ -43,11 +39,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                     ),
             ),
             IconButton(
-              onPressed: () => {
-                setState(() {
-                  currentPage = 1;
-                })
-              },
+              onPressed: () => {widget.onChange(1), currentPage = 1},
               icon: currentPage == 1
                   ? SvgPicture.asset(
                       'assets/svgs/gift.svg',
@@ -61,11 +53,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                     ),
             ),
             IconButton(
-              onPressed: () => {
-                setState(() {
-                  currentPage = 2;
-                })
-              },
+              onPressed: () => {widget.onChange(2), currentPage = 2},
               icon: currentPage == 2
                   ? SvgPicture.asset(
                       'assets/svgs/receipt.svg',
