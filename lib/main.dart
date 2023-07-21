@@ -20,11 +20,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
         providers: [
-          ChangeNotifierProvider(create: (_) => QuantityOption()),
-          ChangeNotifierProvider(create: (_) => ShotOption()),
-          ChangeNotifierProvider(create: (_) => CupTypeOption()),
-          ChangeNotifierProvider(create: (_) => SizeOption()),
-          ChangeNotifierProvider(create: (_) => IceOption()),
+          ChangeNotifierProvider(create: (context) => QuantityOption()),
+          ChangeNotifierProvider(create: (context) => ShotOption()),
+          ChangeNotifierProvider(create: (context) => TempOption()),
+          ChangeNotifierProvider(create: (context) => SizeOption()),
+          ChangeNotifierProvider(create: (context) => IceOption()),
         ],
         child: MaterialApp(
           //title: 'Cinema Selection',

@@ -17,39 +17,30 @@ class QuantityOption with ChangeNotifier {
 
 class ShotOption with ChangeNotifier {
   bool _singleShot = false;
-  bool _doubleShot = false;
 
   bool get singleShot => _singleShot;
-  bool get doubleShot => _doubleShot;
   void chooseSingleShot() {
     _singleShot = true;
-    _doubleShot = false;
     notifyListeners();
   }
 
   void chooseDoubleShot() {
     _singleShot = false;
-    _doubleShot = true;
     notifyListeners();
   }
 }
 
-class CupTypeOption with ChangeNotifier {
-  bool _cup = false;
-  bool _plastic = false;
+class TempOption with ChangeNotifier {
+  bool _hot = false;
+  bool get hot => _hot;
 
-  bool get cup => _cup;
-  bool get plastic => _plastic;
-
-  void chooseCup() {
-    _cup = true;
-    _plastic = false;
+  void chooseHot() {
+    _hot = true;
     notifyListeners();
   }
 
-  void choosePlastic() {
-    _cup = false;
-    _plastic = true;
+  void chooseCold() {
+    _hot = false;
     notifyListeners();
   }
 }

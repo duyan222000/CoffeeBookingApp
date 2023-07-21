@@ -37,7 +37,17 @@ flutter:
     - assets/svgs/home_disable.svg
     - assets/svgs/receipt_disable.svg
     - assets/svgs/gift_disable.svg
-    
+    - assets/svgs/back_arrow.svg
+    - assets/svgs/hot_coffee.svg
+    - assets/svgs/hot_coffee_choose.svg
+    - assets/svgs/cold_coffee.svg
+    - assets/svgs/cold_coffee_choose.svg
+    - assets/svgs/size_small.svg
+    - assets/svgs/size_medium.svg
+    - assets/svgs/size_big.svg
+    - assets/svgs/ice1.svg
+    - assets/svgs/ice2.svg
+    - assets/svgs/ice3.svg
 
 
 
