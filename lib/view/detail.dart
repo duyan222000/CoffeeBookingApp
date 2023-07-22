@@ -69,13 +69,25 @@ class CoffeeDetailOrder extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 30, right: 30, bottom: 20, top: 80),
+                  left: 40, right: 40, top: 150, bottom: 20),
               child: TotalCast(),
             ),
             Container(
+              width: 315,
+              height: 46,
               decoration: BoxDecoration(
                   color: Color.fromARGB(248, 50, 74, 89),
-                  borderRadius: BorderRadius.all(Radius.circular(30))),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(30),
+                  )),
+              child: Center(
+                child: Text('Add to cart',
+                    style: TextStyle(
+                        fontFamily: "Poppins",
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFFFFFFFF))),
+              ),
             )
           ],
         )

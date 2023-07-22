@@ -23,7 +23,10 @@ class AmountRow extends StatelessWidget {
             width: 79,
             height: 30,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50), color: Colors.white),
+                borderRadius: BorderRadius.circular(50),
+                color: Colors.white,
+                border: Border.all(
+                    width: 1.2, color: Color.fromRGBO(216, 216, 216, 0.40))),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
