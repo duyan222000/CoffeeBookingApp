@@ -1,5 +1,6 @@
 import 'package:cinema_showtime_selection/component/coffee_box.dart';
 import 'package:cinema_showtime_selection/database.dart';
+import 'package:cinema_showtime_selection/screen/detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class ChooseCoffee extends StatefulWidget {
@@ -50,7 +51,13 @@ class _ChooseCoffeeState extends State<ChooseCoffee> {
                     children: <Widget>[
                       for (int i = 0; i < 4; ++i)
                         IconButton(
-                            onPressed: () => {print(i)},
+                            onPressed: () => {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const CoffeeDetailOrder()))
+                                },
                             icon: CoffeeBox(coffeeList[i]))
                     ],
                   ),

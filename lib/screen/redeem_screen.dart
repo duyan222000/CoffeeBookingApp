@@ -1,6 +1,4 @@
-import 'package:cinema_showtime_selection/component/redeem_coffee_card.dart';
 import 'package:cinema_showtime_selection/component/redeem_coffee_card_scroll.dart';
-import 'package:cinema_showtime_selection/component/text_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:cinema_showtime_selection/database.dart';

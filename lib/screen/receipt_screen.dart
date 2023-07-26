@@ -1,7 +1,5 @@
-import 'package:cinema_showtime_selection/component/my_order_scroll.dart';
 import 'package:cinema_showtime_selection/component/my_order_topbar.dart';
 import 'package:cinema_showtime_selection/component/page_view_receipt.dart';
-import 'package:cinema_showtime_selection/database.dart';
 import 'package:flutter/material.dart';
 
 class ReceiptScreen extends StatefulWidget {
