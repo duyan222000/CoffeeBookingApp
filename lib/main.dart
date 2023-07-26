@@ -2,7 +2,6 @@
 
 import 'package:cinema_showtime_selection/component/screen_scroll_view.dart';
 import 'package:cinema_showtime_selection/screen/loading_screen.dart';
-import 'package:cinema_showtime_selection/screen/main_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -40,13 +39,13 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
+        const Duration(seconds: 3),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => ScreenScrollView())));
+            MaterialPageRoute(builder: (context) => const ScreenScrollView())));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.white, child: LoadingScreen());
+    return Container(color: Colors.white, child: const LoadingScreen());
   }
 }

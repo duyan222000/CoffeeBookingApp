@@ -1,4 +1,3 @@
-import 'package:cinema_showtime_selection/component/coffee_point.dart';
 import 'package:cinema_showtime_selection/component/coffee_point_scroll.dart';
 import 'package:cinema_showtime_selection/component/loyalty_card.dart';
 import 'package:cinema_showtime_selection/component/point_redeem_card.dart';
@@ -56,7 +55,7 @@ class _RewardScreenState extends State<RewardScreen> {
                       fontSize: 18,
                       fontWeight: FontWeight.w500)),
             ),
-            const Expanded(child: CoffeePointScroll()),
+            const Flexible(child: CoffeePointScroll()),
             const SizedBox(
               height: 90,
             )

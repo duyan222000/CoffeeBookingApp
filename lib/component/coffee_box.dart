@@ -1,5 +1,4 @@
 import 'package:cinema_showtime_selection/database.dart';
-import 'package:cinema_showtime_selection/variable/cup_of_coffee.dart';
 import 'package:flutter/material.dart';
 
 class CoffeeBox extends StatefulWidget {

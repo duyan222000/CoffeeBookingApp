@@ -1,6 +1,6 @@
 import 'package:cinema_showtime_selection/component/bottom_navigation.dart';
 import 'package:cinema_showtime_selection/screen/home_screen.dart';
-import 'package:cinema_showtime_selection/screen/loading_screen.dart';
+import 'package:cinema_showtime_selection/screen/receipt_screen.dart';
 import 'package:cinema_showtime_selection/screen/reward_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -40,12 +40,16 @@ class _ScreenScrollViewState extends State<ScreenScrollView> {
             width: MediaQuery.of(context).size.width, // card height
             child: Stack(children: [
               PageView.builder(
-                itemCount: 2,
+                itemCount: 3,
                 controller: _pageController,
                 physics: const NeverScrollableScrollPhysics(),
                 onPageChanged: (int index) => setState(() => _index = index),
                 itemBuilder: (_, i) {
-                  return i == 0 ? const MyHomeScreen() : const RewardScreen();
+                  return i == 0
+                      ? const MyHomeScreen()
+                      : i == 1
+                          ? const RewardScreen()
+                          : const ReceiptScreen();
                 },
               ),
               Align(

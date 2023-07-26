@@ -12,5 +12,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[dart]": { "editor.defaultFormatter": "Dart-Code.dart-code" },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "cmake.sourceDirectory": "D:/Computer Science/Flutter Project/cinema_showtime_selection/windows/flutter",
+  "cmake.configureOnOpen": false
 }

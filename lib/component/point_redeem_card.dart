@@ -1,3 +1,5 @@
+import 'package:cinema_showtime_selection/database.dart';
+import 'package:cinema_showtime_selection/screen/redeem_screen.dart';
 import 'package:flutter/material.dart';
 
 class PointRedeemCard extends StatefulWidget {
@@ -21,13 +23,13 @@ class _PointRedeemCardState extends State<PointRedeemCard> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 30.0),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(
+                      const Text(
                         "My Points:",
                         style: TextStyle(
                             fontFamily: 'Poppins',
@@ -36,8 +38,8 @@ class _PointRedeemCardState extends State<PointRedeemCard> {
                             fontWeight: FontWeight.w500),
                       ),
                       Text(
-                        "2750",
-                        style: TextStyle(
+                        (user.personalPoint).toString(),
+                        style: const TextStyle(
                             fontFamily: 'Poppins',
                             color: Color(0xFFD8D8D8),
                             fontSize: 25,
@@ -49,7 +51,12 @@ class _PointRedeemCardState extends State<PointRedeemCard> {
                 Padding(
                   padding: const EdgeInsets.only(right: 30.0),
                   child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const RedeemScreen()))
+                          },
                       child: Container(
                           decoration: const BoxDecoration(
                             color: Color.fromRGBO(162, 205, 233, 0.19),

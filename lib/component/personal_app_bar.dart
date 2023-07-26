@@ -1,3 +1,4 @@
+import 'package:cinema_showtime_selection/screen/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -48,7 +49,12 @@ class _PersonalAppBarState extends State<PersonalAppBar> {
         Padding(
           padding: const EdgeInsets.only(left: 10.0),
           child: IconButton(
-            onPressed: () => {},
+            onPressed: () => {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProfileScreen()))
+            },
             icon: SvgPicture.asset(
               'assets/svgs/profile.svg',
               width: 26,
