@@ -12,6 +12,7 @@ dependencies:
   flutter_svg: ^2.0.7
   flutter_native_splash: ^2.3.1
   provider: ^6.0.5
+  flutter_slidable: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +59,8 @@ flutter:
     - assets/svgs/size_big_choose.svg
     - assets/svgs/ice_cube.svg
     - assets/svgs/ice_cube_disable.svg
+    - assets/svgs/trash_can.svg
+    - assets/svgs/buy_white.svg
 
   fonts:
     - family: Poppins

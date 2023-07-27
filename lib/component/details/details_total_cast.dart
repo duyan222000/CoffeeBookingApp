@@ -1,15 +1,25 @@
+import 'package:cinema_showtime_selection/controllers/coffee_options.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class TotalCast extends StatelessWidget {
+class TotalCast extends StatefulWidget {
   const TotalCast({super.key});
+
+  @override
+  State<TotalCast> createState() => _TotalCastState();
+}
+
+class _TotalCastState extends State<TotalCast> {
   @override
   Widget build(BuildContext context) {
-    final cash = '\$' + 'Tien';
+    final int cash = (Provider.of<QuantityOption>(context).quantity *
+        (Provider.of<ShotOption>(context).shotCost +
+            Provider.of<SizeOption>(context).sizeCost));
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Text(
+        const Text(
           'Total Amount',
           style: TextStyle(
             fontFamily: "Poppins",
@@ -18,8 +28,8 @@ class TotalCast extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        Text(cash,
-            style: TextStyle(
+        Text('\$ $cash',
+            style: const TextStyle(
               fontFamily: "Poppins",
               fontSize: 16,
               fontWeight: FontWeight.w500,

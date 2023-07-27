@@ -56,7 +56,10 @@ class _ChooseCoffeeState extends State<ChooseCoffee> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const CoffeeDetailOrder()))
+                                              CoffeeDetailOrder(
+                                                  coffeeList[i],
+                                                  coffeeImage[coffeeList[i]]
+                                                      .toString())))
                                 },
                             icon: CoffeeBox(coffeeList[i]))
                     ],

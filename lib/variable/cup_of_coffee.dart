@@ -7,7 +7,7 @@ class CupOfCoffee {
   final DateTime buyDate;
   final bool onGoing;
   final String deliveredLocation;
-
+  final int cost;
   CupOfCoffee(
       {required this.name,
       required this.shot,
@@ -16,5 +16,6 @@ class CupOfCoffee {
       required this.ice,
       required this.buyDate,
       required this.onGoing,
-      required this.deliveredLocation});
+      required this.deliveredLocation,
+      required this.cost});
 }

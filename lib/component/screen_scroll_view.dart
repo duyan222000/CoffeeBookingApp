@@ -27,9 +27,7 @@ class _ScreenScrollViewState extends State<ScreenScrollView> {
     });
   }
 
-  _listener() {
-    print(_pageController);
-  }
+  _listener() {}
 
   @override
   Widget build(BuildContext context) {

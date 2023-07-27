@@ -1,3 +1,4 @@
+import 'package:cinema_showtime_selection/screen/cart_screen.dart';
 import 'package:cinema_showtime_selection/screen/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -39,7 +40,10 @@ class _PersonalAppBarState extends State<PersonalAppBar> {
         ),
         SizedBox(width: MediaQuery.of(context).size.width * 0.4),
         IconButton(
-          onPressed: () => {},
+          onPressed: () => {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const CartScreen()))
+          },
           icon: SvgPicture.asset(
             'assets/svgs/buy.svg',
             width: 26,

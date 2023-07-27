@@ -10,7 +10,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: false),
+      onGoing: false,
+      cost: 3),
   CupOfCoffee(
       name: "Cappuccino",
       shot: "Single",
@@ -19,7 +20,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: false),
+      onGoing: false,
+      cost: 3),
   CupOfCoffee(
       name: "Mocha",
       shot: "Single",
@@ -28,7 +30,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: false),
+      onGoing: false,
+      cost: 3),
   CupOfCoffee(
       name: "Flat White",
       shot: "Single",
@@ -37,7 +40,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: false),
+      onGoing: false,
+      cost: 3),
   CupOfCoffee(
       name: "Flat White",
       shot: "Double",
@@ -46,7 +50,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: false),
+      onGoing: false,
+      cost: 3),
   CupOfCoffee(
       name: "Americano",
       shot: "Single",
@@ -55,7 +60,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: false),
+      onGoing: false,
+      cost: 3),
   CupOfCoffee(
       name: "Cappuccino",
       shot: "Single",
@@ -64,7 +70,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: false),
+      onGoing: false,
+      cost: 3),
   CupOfCoffee(
       name: "Mocha",
       shot: "Single",
@@ -73,7 +80,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: false),
+      onGoing: false,
+      cost: 3),
   CupOfCoffee(
       name: "Flat White",
       shot: "Single",
@@ -82,7 +90,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: true),
+      onGoing: true,
+      cost: 3),
   CupOfCoffee(
       name: "Flat White",
       shot: "Double",
@@ -91,7 +100,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: true),
+      onGoing: true,
+      cost: 3),
   CupOfCoffee(
       name: "Americano",
       shot: "Single",
@@ -100,7 +110,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: true),
+      onGoing: true,
+      cost: 3),
   CupOfCoffee(
       name: "Cappuccino",
       shot: "Single",
@@ -109,7 +120,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: false),
+      onGoing: false,
+      cost: 3),
   CupOfCoffee(
       name: "Mocha",
       shot: "Single",
@@ -118,7 +130,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: true),
+      onGoing: true,
+      cost: 3),
   CupOfCoffee(
       name: "Flat White",
       shot: "Single",
@@ -127,7 +140,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: false),
+      onGoing: false,
+      cost: 3),
   CupOfCoffee(
       name: "Flat White",
       shot: "Double",
@@ -136,7 +150,8 @@ List<CupOfCoffee> coffeeCups = [
       ice: "Full",
       buyDate: DateTime.parse('1969-07-20 20:18:04Z'),
       deliveredLocation: '120/11 Thich Quang Duc P4 Phu Nhuan',
-      onGoing: true),
+      onGoing: true,
+      cost: 3),
 ];
 
 final List<String> coffeeList = [
@@ -145,6 +160,7 @@ final List<String> coffeeList = [
   "Mocha",
   "Flat White"
 ];
+Map<CupOfCoffee, int> cart = {};
 
 final Map<String, String> coffeeImage = {
   "Americano": "assets/images/americano.png",
@@ -154,6 +170,7 @@ final Map<String, String> coffeeImage = {
 };
 
 final List<String> redeemList = ["Americano", "Cappuccino", "Flat White"];
+int totalCost = 0;
 
 User user = User(
     fullName: "Van Duy An",

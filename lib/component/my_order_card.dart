@@ -34,12 +34,12 @@ class MyOrderCard extends StatelessWidget {
             ],
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.only(right: 30.0),
+        Padding(
+          padding: const EdgeInsets.only(right: 30.0),
           child: Align(
             alignment: Alignment.centerRight,
-            child: Text("\$3.00",
-                style: TextStyle(
+            child: Text("\$${coffee.cost}.00",
+                style: const TextStyle(
                     fontFamily: 'Poppins',
                     color: Color(0xFF324A59),
                     fontSize: 20,

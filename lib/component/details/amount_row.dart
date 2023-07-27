@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:cinema_showtime_selection/controllers/coffee_options.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:provider/provider.dart';
 
 class AmountRow extends StatelessWidget {
-  const AmountRow({super.key});
-
+  const AmountRow(this.coffeeName, {super.key});
+  final String coffeeName;
   @override
   Widget build(BuildContext context) {
     final quantity = Provider.of<QuantityOption>(context);
@@ -13,9 +12,9 @@ class AmountRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        const Text(
-          'CAFE NAME',
-          style: TextStyle(
+        Text(
+          coffeeName,
+          style: const TextStyle(
               fontFamily: "Poppins", fontSize: 14, fontWeight: FontWeight.w500),
         ),
         Container(
@@ -25,7 +24,8 @@ class AmountRow extends StatelessWidget {
                 borderRadius: BorderRadius.circular(50),
                 color: Colors.white,
                 border: Border.all(
-                    width: 1.2, color: Color.fromRGBO(216, 216, 216, 0.40))),
+                    width: 1.2,
+                    color: const Color.fromRGBO(216, 216, 216, 0.40))),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
