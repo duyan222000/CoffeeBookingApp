@@ -1,5 +1,4 @@
 import 'package:cinema_showtime_selection/component/cart_card.dart';
-import 'package:cinema_showtime_selection/component/redeem_coffee_card.dart';
 import 'package:cinema_showtime_selection/database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
