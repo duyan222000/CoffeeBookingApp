@@ -37,8 +37,8 @@ class ShotRow extends StatelessWidget {
                           width: 1.2,
                         ),
                         color: shotChose.singleShot
-                            ? Color.fromRGBO(216, 216, 216, 0.40)
-                            : Colors.white,
+                            ? Colors.white
+                            : Color.fromRGBO(216, 216, 216, 0.40),
                         borderRadius: BorderRadius.circular(50)),
                     child: Center(
                       child: const Text(
@@ -61,8 +61,8 @@ class ShotRow extends StatelessWidget {
                           width: 1.2,
                         ),
                         color: shotChose.doubleShot
-                            ? Color.fromRGBO(216, 216, 216, 0.40)
-                            : Colors.white,
+                            ? Colors.white
+                            : Color.fromRGBO(216, 216, 216, 0.40),
                         borderRadius: BorderRadius.circular(50)),
                     child: Center(
                       child: const Text(

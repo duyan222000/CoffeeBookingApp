@@ -16,7 +16,7 @@ class QuantityOption with ChangeNotifier {
 }
 
 class ShotOption with ChangeNotifier {
-  bool _singleShot = false;
+  bool _singleShot = true;
   bool _doubleShot = false;
 
   bool get singleShot => _singleShot;
