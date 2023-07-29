@@ -6,7 +6,6 @@ import 'package:cinema_showtime_selection/database.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
-
   @override
   State<CartScreen> createState() => _CartScreenState();
 }

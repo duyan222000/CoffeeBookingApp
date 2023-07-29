@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class TotalCast extends StatefulWidget {
-  const TotalCast({super.key});
-
+  const TotalCast(this.fromRedeem, {super.key});
+  final bool fromRedeem;
   @override
   State<TotalCast> createState() => _TotalCastState();
 }
@@ -28,7 +28,8 @@ class _TotalCastState extends State<TotalCast> {
             color: Colors.black,
           ),
         ),
-        Text('\$ $cash',
+        Text(
+            '\$ ${widget.fromRedeem ? cash - 5 > 0 ? cash - 5 : 0 : cash}',
             style: const TextStyle(
               fontFamily: "Poppins",
               fontSize: 16,

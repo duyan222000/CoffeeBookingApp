@@ -12,8 +12,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class CoffeeDetailOrder extends StatefulWidget {
-  const CoffeeDetailOrder(this.coffeeName, this.image, {Key? key})
+  const CoffeeDetailOrder(this.coffeeName, this.image, this.fromRedeem,
+      {Key? key})
       : super(key: key);
+  final bool fromRedeem;
   final String coffeeName, image;
 
   @override
@@ -62,7 +64,7 @@ class _CoffeeDetailOrderState extends State<CoffeeDetailOrder> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
-                        AmountRow(widget.coffeeName),
+                        AmountRow(widget.coffeeName, widget.fromRedeem),
                         const Divider(
                           color: Color.fromARGB(122, 188, 182, 182),
                           thickness: 0.5,
@@ -85,10 +87,10 @@ class _CoffeeDetailOrderState extends State<CoffeeDetailOrder> {
                         const IceSelect(),
                       ]),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(
+                Padding(
+                  padding: const EdgeInsets.only(
                       left: 40, right: 40, top: 150, bottom: 20),
-                  child: TotalCast(),
+                  child: TotalCast(widget.fromRedeem),
                 ),
                 AddToCartButton(widget.coffeeName)
               ],

@@ -61,6 +61,7 @@ flutter:
     - assets/svgs/ice_cube_disable.svg
     - assets/svgs/trash_can.svg
     - assets/svgs/buy_white.svg
+    - assets/svgs/order_success.svg
 
   fonts:
     - family: Poppins

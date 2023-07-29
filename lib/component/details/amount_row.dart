@@ -3,8 +3,9 @@ import 'package:cinema_showtime_selection/controllers/coffee_options.dart';
 import 'package:provider/provider.dart';
 
 class AmountRow extends StatelessWidget {
-  const AmountRow(this.coffeeName, {super.key});
+  const AmountRow(this.coffeeName, this.fromRedeem, {super.key});
   final String coffeeName;
+  final bool fromRedeem;
   @override
   Widget build(BuildContext context) {
     final quantity = Provider.of<QuantityOption>(context);
@@ -32,7 +33,7 @@ class AmountRow extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    quantity.decreaseQuantity();
+                    !fromRedeem ? quantity.decreaseQuantity() : null;
                   },
                   child: const Text(
                     '-',
@@ -48,7 +49,7 @@ class AmountRow extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    quantity.increaseQuantity();
+                    !fromRedeem ? quantity.increaseQuantity() : null;
                   },
                   child: const Text('+'),
                 ),

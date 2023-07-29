@@ -1,4 +1,5 @@
 import 'package:cinema_showtime_selection/database.dart';
+import 'package:cinema_showtime_selection/screen/order_success_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -39,10 +40,17 @@ class _BottomCartNavigationState extends State<BottomCartNavigation> {
           padding: const EdgeInsets.only(right: 33.0),
           child: GestureDetector(
             onTap: () => {
-              for (var e in cart.keys) {coffeeCups.add(e)},
-              totalCost = 0,
-              cart.clear(),
-              Navigator.pop(context)
+              setState(() {
+                for (var e in cart.keys) {
+                  coffeeCups.add(e);
+                }
+                totalCost = 0;
+                cart.clear();
+              }),
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const OrderSuccessScreen()))
             },
             child: Container(
                 width: 162,
@@ -59,7 +67,7 @@ class _BottomCartNavigationState extends State<BottomCartNavigation> {
                       padding: const EdgeInsets.only(right: 12.0),
                       child: SvgPicture.asset('assets/svgs/buy_white.svg'),
                     ),
-                    const Text('Add to cart',
+                    const Text('Checkout',
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 14,

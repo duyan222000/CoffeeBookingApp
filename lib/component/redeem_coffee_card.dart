@@ -1,3 +1,7 @@
+import 'package:cinema_showtime_selection/component/details/amount_row.dart';
+import 'package:cinema_showtime_selection/controllers/coffee_options.dart';
+import 'package:cinema_showtime_selection/database.dart';
+import 'package:cinema_showtime_selection/screen/detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class RedeemCoffeeCard extends StatefulWidget {
@@ -51,19 +55,31 @@ class _RedeemCoffeeCardState extends State<RedeemCoffeeCard> {
         ),
         Padding(
           padding: const EdgeInsets.only(right: 40.0),
-          child: Container(
-            width: 76,
-            height: 32,
-            decoration: const BoxDecoration(
-                color: Color(0xFF324A59),
-                borderRadius: BorderRadius.all(Radius.circular(50))),
-            child: const Center(
-              child: Text("1340 pts",
-                  style: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w500)),
+          child: GestureDetector(
+            onTap: () => {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => CoffeeDetailOrder(
+                            widget.coffeeName,
+                            coffeeImage[widget.coffeeName].toString(),
+                            true,
+                          )))
+            },
+            child: Container(
+              width: 76,
+              height: 32,
+              decoration: const BoxDecoration(
+                  color: Color(0xFF324A59),
+                  borderRadius: BorderRadius.all(Radius.circular(50))),
+              child: const Center(
+                child: Text("120 pts",
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500)),
+              ),
             ),
           ),
         )

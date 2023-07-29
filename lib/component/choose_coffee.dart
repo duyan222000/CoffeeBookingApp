@@ -59,7 +59,8 @@ class _ChooseCoffeeState extends State<ChooseCoffee> {
                                               CoffeeDetailOrder(
                                                   coffeeList[i],
                                                   coffeeImage[coffeeList[i]]
-                                                      .toString())))
+                                                      .toString(),
+                                                  false)))
                                 },
                             icon: CoffeeBox(coffeeList[i]))
                     ],
